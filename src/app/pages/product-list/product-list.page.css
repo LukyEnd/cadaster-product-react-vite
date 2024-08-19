@@ -17,15 +17,8 @@
     background-color: transparent;
 }
 
-.register-product-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 .table {
-    width: 90%;
+    width: 70%;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -37,16 +30,6 @@
     vertical-align: middle;
 }
 
-.table td a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.table td a:hover {
-    text-decoration: underline;
-}
-
 .table thead {
     background-color: #343a40;
     color: white;
@@ -54,4 +37,39 @@
 
 .table tbody tr:hover {
     background-color: #f1f1f1;
+}
+
+.modal-product-form .modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+.modal-product-form .modal-dialog {
+    backdrop-filter: blur(5px);
+}
+
+.header-product-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-product-list div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.text-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-header {
+    width: 60%;
 }

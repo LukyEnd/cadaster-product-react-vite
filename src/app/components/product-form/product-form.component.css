@@ -22,6 +22,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.cadaster {
+    min-width: 570px;
+}
+
 .product-form-container {
     font-weight: bold;
     color: #555;
@@ -29,6 +33,43 @@
     font-size: 16px;
 }
 
-.text-center {
-    font-size: 30px;
+.btns-product-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+
+.container-btn-product-edit,
+.container-btn-cadaster {
+    width: 100%;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-btn-product-edit {
+    justify-content: space-between;
+}
+
+.container-btn-cadaster {
+    justify-content: flex-end;
+}
+
+.truncated-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+}
+
+.container-line-description-product {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { InfoProductModel } from '../models/product-model.model.ts';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {InfoProductModel} from '../models/product-model.model.ts';
 import {ProductsStateList} from "../models/product-state-list.model.ts";
 
 const initialState: ProductsStateList = {

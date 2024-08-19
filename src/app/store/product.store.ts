@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import {configureStore} from '@reduxjs/toolkit';
 import productsSlice from './products-slice.store.ts';
 
 const loadProductsFromLocalStorage = () => {

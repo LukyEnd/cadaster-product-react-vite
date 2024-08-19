@@ -1,26 +1,26 @@
-// import React, { useState } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { addVariation, updateVariation, removeVariation } from '../../store/product-variation-slice.store.ts';
-// import { RootState } from '../../store/product.store.ts';
-// import { ProductVariationModel } from '../../models/product-variation.model.ts';
+// import React, {useState} from 'react';
+// import {useDispatch, useSelector} from 'react-redux';
+// import {addVariation, updateVariation, removeVariation} from '../../store/product-variation-slice.store.ts';
+// import {RootState} from '../../store/product.store.ts';
+// import {ProductVariationModel} from '../../models/product-variation.model.ts';
 //
-// const ProductVariationsComponent: React.FC<{ productId: number }> = ({ productId }) => {
+// const ProductVariationsComponent: React.FC<{ productId: number }> = ({productId}) => {
 //     const dispatch = useDispatch();
 //     const variations = useSelector((state: RootState) => state.variations.variations.filter(variation => variation.productId === productId));
 //
-//     const [newVariation, setNewVariation] = useState<ProductVariationModel>({ productId, name: '' });
+//     const [newVariation, setNewVariation] = useState<ProductVariationModel>({productId, name: ''});
 //
 //     const handleVariationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//         setNewVariation({ ...newVariation, name: e.target.value });
+//         setNewVariation({...newVariation, name: e.target.value});
 //     };
 //
 //     const handleAddVariation = () => {
 //         dispatch(addVariation(newVariation));
-//         setNewVariation({ productId, name: '' });
+//         setNewVariation({productId, name: ''});
 //     };
 //
 //     const handleUpdateVariation = (id: number, name: string) => {
-//         dispatch(updateVariation({ id, name }));
+//         dispatch(updateVariation({id, name}));
 //     };
 //
 //     const handleRemoveVariation = (id: number) => {

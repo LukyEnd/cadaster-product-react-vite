@@ -1,20 +1,51 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../store/product.store.ts';
-import { Link } from 'react-router-dom';
-import { Table } from 'react-bootstrap';
+import React, {useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '../../store/product.store.ts';
+import {Table, Button, Modal} from 'react-bootstrap';
+import {deleteProduct} from '../../store/products-slice.store.ts';
 import SidebarComponent from "../../components/side-bar/side-bar.component.tsx";
 import './product-list.page.css';
+import {InfoProductModel} from "../../models/product-info.model.ts";
+import ProductFormComponent from "../../components/product-form/product-form.component.tsx";
 
 const ProductListPage: React.FC = () => {
+    const dispatch = useDispatch();
     const products = useSelector((state: RootState) => state.products.products);
+    const [showFormModal, setShowFormModal] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState<InfoProductModel | null>(null);
+
+    const handleShowForm = (product: InfoProductModel | null): void => {
+        setSelectedProduct(product);
+        setShowFormModal(true);
+    };
+
+    const handleCloseForm = (): void => {
+        setShowFormModal(false);
+        setSelectedProduct(null);
+    };
+
+    const handleDelete = (id: string): void => {
+        if (window.confirm('Você tem certeza que deseja excluir este produto?')) {
+            dispatch(deleteProduct(id));
+        }
+    };
 
     return (
         <div className="page-container">
             <SidebarComponent/>
             <div className="content-product-list">
-                <div className="register-product-name">
-                    <p>Produtos Cadastrados</p>
+                <div className="header-product-list">
+                    <div className="text-header">
+                        <h2>Produtos Cadastrados</h2>
+                    </div>
+                    <div className="btn-header">
+                        <Button
+                            variant="success"
+                            onClick={() => handleShowForm(null)}
+                            className="float-end">
+                            Cadastrar Produto
+                        </Button>
+                    </div>
                 </div>
                 <Table striped bordered hover>
                     <thead>
@@ -33,19 +64,34 @@ const ProductListPage: React.FC = () => {
                         <tr key={product.id}>
                             <td>{product.id}</td>
                             <td>{product.name}</td>
-                            <td>{product.description}</td>
+                            <td className="truncated-text">{product.description}</td>
                             <td>{product.price}</td>
                             <td>{product.category}</td>
                             <td>{product.stockQuantity}</td>
-                            <td>
-                                <Link to={`/edit-product/${product.id}`} className="btn btn-primary">
+                            <td className="container-line-description-product">
+                                <Button
+                                    variant="primary"
+                                    className="me-2"
+                                    onClick={() => handleShowForm(product)}>
                                     Editar
-                                </Link>
+                                </Button>
+                                <Button
+                                    variant="danger"
+                                    onClick={() => handleDelete(product.id)}>
+                                    Excluir
+                                </Button>
                             </td>
                         </tr>
                     ))}
                     </tbody>
                 </Table>
+                <Modal show={showFormModal} onHide={handleCloseForm} size="lg" className=' modal-product-form'>
+                    <ProductFormComponent
+                        isEditMode={selectedProduct !== null}
+                        onClose={handleCloseForm}
+                        product={selectedProduct || undefined}
+                    />
+                </Modal>
             </div>
         </div>
     );
