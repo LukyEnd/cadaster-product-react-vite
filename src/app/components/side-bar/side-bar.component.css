@@ -1,0 +1,26 @@
+.sidebar {
+    height: 96vh;
+    width: 250px;
+    position: fixed;
+    left: 0;
+    background-color: #123659;
+    padding: 100px 20px;
+    overflow-x: hidden;
+    transition: 0.3s;
+    border-radius: 0 10px 10px 10px;
+    overflow-y: hidden;
+}
+
+.sidebar.active {
+    width: 0;
+    padding: 20px 0;
+}
+
+.sidebar .nav-link {
+    font-size: 18px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+    color: beige;
+}
