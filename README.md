@@ -1,6 +1,6 @@
 # LukyProductForm
 
-LucasProductManager é uma aplicação desenvolvida em React para o
+LukyProductForm é uma aplicação desenvolvida em React para o
 gerenciamento eficiente de produtos, utilizando Bootstrap para
 uma estilização moderna e responsiva. A plataforma permite a
 criação, edição e visualização de produtos, além da gestão de
