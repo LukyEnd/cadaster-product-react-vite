@@ -19,15 +19,11 @@ de usar.
 
 ## Modal de Cadastro
 
-<img width="1433" alt="image" src="https://github.com/user-attachments/assets/0d628a36-1ade-457d-8b91-06882d8f0f63">
+<img width="1438" alt="image" src="https://github.com/user-attachments/assets/081df1ce-47db-4c84-ab9d-6c0380d9ddf3">
 
-## Modal de Edição
+## Modal de Edição com Identificação de produtos com a mesma variação
 
-<img width="1437" alt="image" src="https://github.com/user-attachments/assets/76171227-e586-48ce-acf8-de6d401b00ac">
-
-## Identificação de produtos com a mesma variação
-
-<img width="1431" alt="image" src="https://github.com/user-attachments/assets/252cdf7f-7d79-46c3-aa72-7694af1ab7e6">
+<img width="1427" alt="image" src="https://github.com/user-attachments/assets/88a01ccc-85fe-4014-9551-66517c7b91b1">
 
 
 ## Índice
