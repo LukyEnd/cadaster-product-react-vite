@@ -1,8 +1,9 @@
-import {InfoProductModel} from "./product-info.model.ts";
+import { InfoProductModel } from './product-info.model.ts'
 
 export interface ProductFormComponentPropsModel {
-    isEditMode?: boolean;
-    titleForComponent?: string;
-    onClose?: () => void;
-    product?: InfoProductModel;
+  isEditMode?: boolean
+  titleForComponent?: string
+  onClose?: () => void
+  product?: InfoProductModel
+  variations?
 }

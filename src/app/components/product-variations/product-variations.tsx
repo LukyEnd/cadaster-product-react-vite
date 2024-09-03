@@ -1,58 +1,40 @@
-// import React, {useState} from 'react';
-// import {useDispatch, useSelector} from 'react-redux';
-// import {addVariation, updateVariation, removeVariation} from '../../store/product-variation-slice.store.ts';
-// import {RootState} from '../../store/product.store.ts';
-// import {ProductVariationModel} from '../../models/product-variation.model.ts';
-//
-// const ProductVariationsComponent: React.FC<{ productId: number }> = ({productId}) => {
-//     const dispatch = useDispatch();
-//     const variations = useSelector((state: RootState) => state.variations.variations.filter(variation => variation.productId === productId));
-//
-//     const [newVariation, setNewVariation] = useState<ProductVariationModel>({productId, name: ''});
-//
-//     const handleVariationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//         setNewVariation({...newVariation, name: e.target.value});
-//     };
-//
-//     const handleAddVariation = () => {
-//         dispatch(addVariation(newVariation));
-//         setNewVariation({productId, name: ''});
-//     };
-//
-//     const handleUpdateVariation = (id: number, name: string) => {
-//         dispatch(updateVariation({id, name}));
-//     };
-//
-//     const handleRemoveVariation = (id: number) => {
-//         dispatch(removeVariation(id));
-//     };
-//
-//     return (
-//         <div>
-//             <h2>Variações do Produto</h2>
-//             <div>
-//                 <input
-//                     type="text"
-//                     value={newVariation.name}
-//                     onChange={handleVariationChange}
-//                     placeholder="Nome da Variação"
-//                 />
-//                 <button onClick={handleAddVariation}>Adicionar Variação</button>
-//             </div>
-//             <ul>
-//                 {variations.map(variation => (
-//                     <li key={variation.id}>
-//                         <input
-//                             type="text"
-//                             value={variation.name}
-//                             onChange={(e) => handleUpdateVariation(variation.id, e.target.value)}
-//                         />
-//                         <button onClick={() => handleRemoveVariation(variation.id)}>Remover</button>
-//                     </li>
-//                 ))}
-//             </ul>
-//         </div>
-//     );
-// };
-//
-// export default ProductVariationsComponent;
+import React from 'react'
+import './product-variations.css'
+import { ProductVariationsProps } from '../../models/product-variation.props.ts'
+
+const ProductVariationsComponent: React.FC<ProductVariationsProps> = ({
+  variation,
+  filteredProducts,
+}) => {
+  if (!variation) return null
+
+  return (
+    <div className="mt-4 container-variations">
+      <p className="variations-title">Produtos com a Variação: {variation}</p>
+      <div className="table-container">
+        <table className="table-variation">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredProducts.map((product) => (
+              <tr key={product.id}>
+                <td>{product.id}</td>
+                <td>{product.name}</td>
+                <td>{product.price}</td>
+                <td>{product.stockQuantity}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )
+}
+
+export default ProductVariationsComponent

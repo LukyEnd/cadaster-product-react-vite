@@ -1,5 +1,5 @@
-import {InfoProductModel} from "./product-model.model.ts";
+import { InfoProductModel } from './product-info.model.ts'
 
 export interface ProductsStateList {
-    products: InfoProductModel[];
+  products: InfoProductModel[]
 }

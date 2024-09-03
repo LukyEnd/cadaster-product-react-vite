@@ -1,50 +1,89 @@
-# React + TypeScript + Vite
+# LukyProductForm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+LucasProductManager é uma aplicação desenvolvida em React para o
+gerenciamento eficiente de produtos, utilizando Bootstrap para
+uma estilização moderna e responsiva. A plataforma permite a
+criação, edição e visualização de produtos, além da gestão de
+suas variações. O formulário de cadastro e edição é otimizado
+para facilitar a inserção de dados, e a formatação automática do
+código com Prettier assegura um código limpo e consistente. Ideal
+para quem busca uma solução prática e bem estruturada para
+administração de inventário com uma interface atraente e fácil
+de usar.
 
-Currently, two official plugins are available:
+## Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Uso](#uso)
+  - [Rodando o Projeto](#rodando-o-projeto)
+  - [Formatando o Código](#formatando-o-código)
+- [Licença](#licença)
 
-## Expanding the ESLint configuration
+## Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Antes de começar, certifique-se de ter o [Node.js](https://nodejs.org/) instalado na sua máquina.
 
-- Configure the top-level `parserOptions` property like this:
+## Instalação
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   ```
+
+2. Navegue até o diretório do projeto:
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+## Uso
+
+### Rodando o Projeto
+
+Para iniciar o servidor de desenvolvimento e ver o projeto em ação, execute:
+
+```bash
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Isso iniciará o servidor e você poderá visualizar o projeto em
+http://localhost:3000, embora a porta possa variar.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Formatando o Código
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Para formatar todo o código com Prettier, execute:
+
+```bash
+npm run format
 ```
+
+Isso aplicará a formatação definida no Prettier a todos os arquivos
+do projeto.
+
+## Licença
+
+Este projeto é licenciado sob a MIT License. Veja os detalhes abaixo:
+
+MIT License
+
+Copyright (c) 2024 Lucas Sanches
+
+Permissão é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia
+deste software e arquivos de documentação associados (o "Software"), para lidar
+com o Software sem restrições, incluindo, sem limitação, os direitos de usar, copiar,
+modificar, fundir, publicar, distribuir, sublicenciar e/ou vender cópias do Software,
+e permitir que as pessoas a quem o Software é fornecido o façam, sujeito às seguintes condições:
+
+A nota de copyright acima e esta nota de permissão devem ser incluídas em todas
+as cópias ou porções substanciais do Software.
+
+O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU
+IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIABILIDADE,
+ADEQUAÇÃO A UM FIM ESPECÍFICO E NÃO INFRAÇÃO. EM NENHUM CASO OS AUTORES OU DETENTORES
+DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER RECLAMAÇÃO, DANO OU OUTRA
+RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, AGRAVO OU OUTRA, DECORRENTE DE,
+OU EM CONEXÃO COM O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.

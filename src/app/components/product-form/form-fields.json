@@ -1,0 +1,39 @@
+[
+  {
+    "id": "id-produto",
+    "label": "ID do produto",
+    "type": "number",
+    "name": "id",
+    "disabled": true
+  },
+  {
+    "id": "preco-produto",
+    "label": "Preço do Produto",
+    "type": "number",
+    "name": "price",
+    "disabled": false
+  },
+  {
+    "id": "quantidade-produto",
+    "label": "Quantidade em Loja",
+    "type": "number",
+    "name": "stockQuantity",
+    "disabled": false
+  },
+  {
+    "id": "nome-produto",
+    "label": "Nome do Produto",
+    "type": "text",
+    "name": "name",
+    "col": 6,
+    "disabled": false
+  },
+  {
+    "id": "categoria-produto",
+    "label": "Categoria do Produto",
+    "type": "text",
+    "name": "category",
+    "col": 6,
+    "disabled": false
+  }
+]

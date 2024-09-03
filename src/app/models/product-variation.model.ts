@@ -1,4 +1,6 @@
 export interface ProductVariationModel {
-    productId: number,
-    name: string
+  id: number
+  name: string
+  price?: number
+  stockQuantity?: number
 }
