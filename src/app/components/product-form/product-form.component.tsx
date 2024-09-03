@@ -27,12 +27,12 @@ const getInputClassName = (inputName: string): string => {
 
 const ProductFormComponent: React.FC<ProductFormComponentPropsModel> = ({
   isEditMode = false,
-  titleForComponent = 'Cadastrar Produto',
   onClose,
   product,
 }) => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const [title, setTitle] = useState<string>()
   const products = useSelector((state: RootState) => state.products.products)
 
   const initialFormState: InfoProductModel = {
@@ -86,6 +86,10 @@ const ProductFormComponent: React.FC<ProductFormComponentPropsModel> = ({
     }))
   }
 
+  useEffect((): void => {
+    setTitle(isEditMode ? 'Editar Produto' : 'Cadastrar Produto')
+  }, [isEditMode])
+
   const handleSubmit = (event: React.FormEvent): void => {
     event.preventDefault()
     if (isEditMode) {
@@ -109,7 +113,7 @@ const ProductFormComponent: React.FC<ProductFormComponentPropsModel> = ({
               : 'product-form-container cadaster'
           }
         >
-          <p className="text-center">{titleForComponent}</p>
+          <p className="text-center">{title}</p>
           <div className="row mb-3">
             {formFields.map((input, index) => (
               <div
@@ -180,7 +184,7 @@ const ProductFormComponent: React.FC<ProductFormComponentPropsModel> = ({
       </div>
       {filteredProducts.length > 0 && (
         <ProductVariationsComponent
-          variation={formState.variation}
+          variation={formState.variation as string}
           filteredProducts={filteredProducts}
         />
       )}

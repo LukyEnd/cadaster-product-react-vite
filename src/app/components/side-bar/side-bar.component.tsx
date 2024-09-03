@@ -38,15 +38,6 @@ const SidebarComponent: React.FC = () => {
               Lista de Produtos
             </Link>
           </Nav.Item>
-          <Nav.Item>
-            <Link
-              to="/product-creation"
-              className={`nav-link ${location.pathname === '/product-creation' ? 'disabled' : ''}`}
-              onClick={handleLinkClick}
-            >
-              Cadastrar Produto
-            </Link>
-          </Nav.Item>
         </Nav>
       </div>
       <button
