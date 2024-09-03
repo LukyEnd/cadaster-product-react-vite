@@ -11,6 +11,25 @@ para quem busca uma solução prática e bem estruturada para
 administração de inventário com uma interface atraente e fácil
 de usar.
 
+<img width="1433" alt="image" src="https://github.com/user-attachments/assets/32756601-7be1-4fd0-a4a6-f16309d690cd">
+
+## Pagina de Listar produtos
+
+<img width="1435" alt="image" src="https://github.com/user-attachments/assets/3269da60-208f-439a-b1f9-5283224f1a19">
+
+## Modal de Cadastro
+
+<img width="1433" alt="image" src="https://github.com/user-attachments/assets/0d628a36-1ade-457d-8b91-06882d8f0f63">
+
+## Modal de Edição
+
+<img width="1437" alt="image" src="https://github.com/user-attachments/assets/76171227-e586-48ce-acf8-de6d401b00ac">
+
+## Identificação de produtos com a mesma variação
+
+<img width="1431" alt="image" src="https://github.com/user-attachments/assets/252cdf7f-7d79-46c3-aa72-7694af1ab7e6">
+
+
 ## Índice
 
 - [Pré-requisitos](#pré-requisitos)
